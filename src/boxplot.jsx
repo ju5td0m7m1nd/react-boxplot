@@ -1,12 +1,12 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['react', 'underscore'], factory);
-    } else if (typeof exports === 'object') {
-        module.exports = factory(require('react'), require('underscore'));
-    } else {
-        root.Boxplot = factory(root.React, root._);
-    }
-}(this, function (React, _) {
+     if (typeof define === 'function' && define.amd) {
+              define(['react', 'create-react-class', 'prop-types', 'underscore'], factory);
+          } else if (typeof exports === 'object') {
+              module.exports = factory(require('react'), require('create-react-class'), require('prop-types'), require('underscore'));
+          } else {
+              root.Boxplot = factory(root.React, root.createReactClass, root.PropTypes, root._);
+          }
+}(this, function (React, createReactClass, PropTypes, _) {
 
     // Inspiration:
     //

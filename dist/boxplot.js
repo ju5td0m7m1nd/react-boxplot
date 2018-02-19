@@ -15,7 +15,7 @@
     // - http://bl.ocks.org/jensgrubert/7789216
     // - http://flowingdata.com/2008/02/15/how-to-read-and-use-a-box-and-whisker-plot/
     //
-    var Boxplot = React.createClass({
+    var Boxplot = createReactClass({
 
         propTypes: {
             // Width of the svg element

@@ -118,7 +118,10 @@
                             x1:  xMin, x2:  xMax, 
                             y1:  stats.whiskerLow, y2:  stats.whiskerLow, 
                             strokeWidth:  this.props.whiskerStrokeWidth / horizScaleFactor, 
-                            style:  this.props.tickStyle}), 
+                            style:  Object.assign({}, this.props.tickStyle, {
+              stroke: stats.whiskerLow > 0 ? "red" : "green"
+            })
+ }), 
                         React.createElement("line", {
                             key: "whisker-low", 
                             x1:  xCenter, x2:  xCenter, 
@@ -149,7 +152,10 @@
                             x1:  xMin, x2:  xMax, 
                             y1:  stats.whiskerHigh, y2:  stats.whiskerHigh, 
                             strokeWidth:  this.props.whiskerStrokeWidth / horizScaleFactor, 
-                            style:  this.props.tickStyle}), 
+                            style:  Object.assign({}, this.props.tickStyle, {
+              stroke: stats.whiskerHigh > 0 ? "red" : "green"
+            })
+ }), 
                         
                             _(stats.outliers).map(function (outlier, index) {
                                 return (
